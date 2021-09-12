@@ -25,6 +25,9 @@ class RESTClient:
 
     def close(self):
         self._session.close()
+        
+    def ts_to_datetime(ts) -> str:
+        return datetime.datetime.fromtimestamp(ts / 1000.0).strftime('%Y-%m-%d %H:%M')
 
     def _handle_response(self, response_type: str, endpoint: str, params: Dict[str, str]) -> Type[library.AnyDefinition]:
         resp: requests.Response = self._session.get(endpoint, params=params, timeout=self.timeout)
