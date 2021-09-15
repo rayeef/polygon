@@ -38,7 +38,7 @@ def main():
             #print(bmsg)
 
             '''MongoDB Connection Link'''
-            connection_string = "mongodb+srv://skhan:A330airbus@cluster0.f4uut.mongodb.net/IG-FX?retryWrites=true&w=majority"
+            connection_string = "mongodb+srv://skhan:A330airbus@cluster0.f4uut.mongodb.net/POLYGON_STOCKS_EOD?retryWrites=true&w=majority"
             client = MongoClient(connection_string)
             db = client["POLYGON_STOCKS_EOD"]
             collection = db["AAPL"]
